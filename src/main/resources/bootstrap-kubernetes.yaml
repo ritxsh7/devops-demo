@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: myapp
+  config:
+    activate:
+      on-profile: kubernetes # 1
+  cloud:
+    kubernetes:
+      enabled: true # 2
+      reload:
+        enabled: true # 3
+        mode: event # 4
+      config:
+        enabled: true # 5
+        name: myapp-config
+        
+        sources:
+          - name: myapp-config-volume
+        enableVersioning: true

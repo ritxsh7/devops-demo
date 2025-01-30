@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: myapp
+  config:
+    activate:
+      on-profile: default
+  cloud:
+    config:
+      enabled: false
+    kubernetes:
+      enabled: false
