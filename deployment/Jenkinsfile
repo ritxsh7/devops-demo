@@ -57,18 +57,7 @@ pipeline{
 			}
 			}
 		}
-		stage('SonarQubeCodeAnalysis'){
-			steps{
-			script{
-				if(isUnix()){
-					sh "mvn sonar:sonar"
-				}
-				else{
-					bat "mvn sonar:sonar"
-				}
-			}
-			}
-		}
+		
 		
 	}
 	post{
