@@ -37,10 +37,10 @@ pipeline{
 			steps{
 			script{
 				if(isUnix()){
-					sh "docker buildx build . --tag patilritesh/myapp:latest --push"
+					sh "sudo docker buildx build . --tag patilritesh/myapp:latest --push"
 				}
 				else{
-					bat "docker buildx build . --tag patilritesh/myapp:latest --push"
+					bat "sudo docker buildx build . --tag patilritesh/myapp:latest --push"
 				}
 			}
 			}
