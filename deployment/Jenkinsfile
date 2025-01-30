@@ -60,14 +60,4 @@ pipeline{
 		
 		
 	}
-	post{
-		success{
-			jacoco(
-				classPattern: '**/target/classes',
-				sourcePattern: '**/src/main/java'
-			)
-			junit '**/target/surefire-reports/TEST-*.xml'
-			archiveArtifacts 'target/*.jar'
-		}
-	}
 }
