@@ -9,7 +9,7 @@ pipeline{
 			steps{
 			
 			// get code from github
-			git url: 'https://github.com/krishnamurthypradeep/simple-app-demo.git'
+			git url: 'https://github.com/ritxsh7/devops-demo.git'
 			
 			script{
 				if(isUnix()){
@@ -37,10 +37,10 @@ pipeline{
 			steps{
 			script{
 				if(isUnix()){
-					sh "docker buildx build . --platform linux/arm64 --tag kpradeep/my-app:latest --push"
+					sh "docker buildx build . --tag patilritesh/myapp:latest --push"
 				}
 				else{
-					bat "docker buildx build . --platform linux/arm64 --tag kpradeep/my-app:latest --push"
+					bat "docker buildx build . --tag patilritesh/myapp:latest --push"
 				}
 			}
 			}
